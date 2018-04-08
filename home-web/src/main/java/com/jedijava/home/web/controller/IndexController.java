@@ -1,7 +1,10 @@
 package com.jedijava.home.web.controller;
 
 import com.jedijava.common.annotation.ResponseHtml;
+import com.jedijava.common.model.ResultModel;
+import com.jedijava.common.result.DefaultResultCode;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -13,7 +16,10 @@ public class IndexController {
 
     @ResponseHtml
     @RequestMapping("notfound")
-    public String notFound(){
-        return "exception/htmlErr.html";
+    public String notFound(Model model){
+//        throw new WebException(DefaultResultCode.REQUEST_ERROR_NOT_FIND);
+        ResultModel result= ResultModel.error(DefaultResultCode.REQUEST_ERROR_NOT_FIND);
+        model.addAttribute("result",result);
+        return "exception/jsonErr.ftl";
     }
 }

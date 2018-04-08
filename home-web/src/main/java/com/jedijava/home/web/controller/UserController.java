@@ -1,5 +1,7 @@
 package com.jedijava.home.web.controller;
 
+import com.jedijava.common.model.ResultModel;
+import com.jedijava.home.model.user.UserModel;
 import com.jedijava.home.model.user.UserQuery;
 import com.jedijava.home.service.user.UserService;
 import org.springframework.stereotype.Controller;
@@ -24,7 +26,10 @@ public class UserController {
 
     @GetMapping("/list")
     @ResponseBody
-    public List getList(Model model, UserQuery query) {
-       return userService.selectList(query);
+    public ResultModel getList(Model model, UserQuery query) {
+       List<UserModel> userList=userService.selectList(query);
+       ResultModel result=new ResultModel();
+       result.setData(userList);
+       return result;
     }
 }

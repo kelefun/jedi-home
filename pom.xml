@@ -11,6 +11,7 @@
       <module>home-web</module>
       <module>home-service-impl</module>
       <module>home-dao</module>
+        <module>home-web-admin</module>
     </modules>
     <packaging>pom</packaging>
 

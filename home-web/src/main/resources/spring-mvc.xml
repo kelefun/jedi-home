@@ -33,7 +33,7 @@
 			</list>
 		</property>
 		<property name="annotationErrorView" value="exception/htmlErr.html"/>
-		<property name="defaultErrorView" value="exception/jsonErr.json"/>
+		<property name="defaultErrorView" value="exception/jsonErr.ftl"/>
 		<property name="order" value="0" />
 	</bean>
 
