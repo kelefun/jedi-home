@@ -16,10 +16,15 @@ public class IndexController {
 
     @ResponseHtml
     @RequestMapping("notfound")
-    public String notFound(Model model){
+    public String notFound(Model model) {
         throw new WebException(DefaultResultCode.REQUEST_ERROR_NOT_FIND);
 //        ResultModel result= ResultModel.error(DefaultResultCode.REQUEST_ERROR_NOT_FIND);
 //        model.addAttribute("result",result);
 //        return "exception/jsonErr.ftl";
+    }
+
+    @RequestMapping({"/", "/index.html"})
+    public String index(Model model) {
+        return "view/login.html";
     }
 }
