@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ajax</title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#button").click(function(){
+                $.ajax({
+                    url: 'http://receipt.dev.dasouche-fin.net/site/v1/applyApi/getVerifyStatus.json',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {orderNo: '7628072563862528'},
+                    success:function(result){
+                       console.log(result);
+                    }});
+            });
+            $("#button1").click(function(){
+                $.ajax({
+                    url: 'http://receipt.dev.dasouche-fin.net/site/v1/applyApi/getVerifyStatus.jsonp',
+                    type: 'POST',
+                    dataType : "jsonp",//数据类型为jsonp
+                    jsonp: "callback",//服务端用于接收callback调用的function名的参数
+                    data: {orderNo: '7628072563862528'},
+                    success:function(result){
+                        console.log(result);
+                    }});
+            });
+            $("#button2").click(function(){
+                $.ajax({
+                    url: 'http://local.dasouche-fin.net:8080/site/v1/applyApi/getVerifyStatus.json',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {orderNo: '7628072563862528'},
+                    success:function(result){
+                        console.log(result);
+                    }});
+            });
+            $("#button3").click(function(){
+                $.ajax({
+                    url: 'http://local.dasouche-fin.net:8080/site/v1/applyApi/getVerifyStatus.jsonp',
+                    type: 'POST',
+                    dataType : "jsonp",//数据类型为jsonp
+                    jsonp: "callback",//服务端用于接收callback调用的function名的参数
+                    data: {orderNo: '7628072563862528'},
+                    success:function(result){
+                        console.log(result);
+                    }});
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="button">发送请求</button>
+<button id="button1">发送jsonp请求</button>
+<button id="button2">发送本地请求</button>
+<button id="button3">发送本地jsonp请求</button>
+
+</body>
+</html>
