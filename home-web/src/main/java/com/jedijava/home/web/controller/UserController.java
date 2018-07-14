@@ -27,9 +27,7 @@ public class UserController {
     @GetMapping("/list")
     @ResponseBody
     public ResultModel getList(Model model, UserQuery query) {
-       List<UserModel> userList=userService.selectList(query);
-       ResultModel result=new ResultModel();
-       result.setData(userList);
-       return result;
+        List<UserModel> userList = userService.selectList(query);
+        return ResultModel.success(userList);
     }
 }
