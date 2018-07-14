@@ -2,6 +2,7 @@ package com.jedijava.home.model.user;
 
 
 import com.jedijava.base.model.BaseModel;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -11,6 +12,7 @@ import java.util.Date;
  */
 public class UserModel extends BaseModel {
     private String username;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date updateDate;
 
     public String getUsername() {
