@@ -152,7 +152,5 @@ Google+: <https://plus.google.com/+CreativetimPage>
 
 Instagram: <https://instagram.com/creativetimofficial>
 
-[LICENSE]: ./LICENSE.md
-[CHANGELOG]: ./CHANGELOG.md
 [version-badge]: https://img.shields.io/badge/version-1.1.0-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
