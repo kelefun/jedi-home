@@ -26,55 +26,44 @@ function Footer({ ...props }) {
       <div className={classes.container}>
         <div className={classes.left}>
           <List className={classes.list}>
+
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/"
+                href="/home/aboutus"
                 className={classes.block}
                 target="_blank"
               >
-                Creative Tim
+                关于
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/presentation"
+                href="/home/help"
                 className={classes.block}
                 target="_blank"
               >
-                About us
+              帮助
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="http://blog.creative-tim.com/"
+                href="/home/license"
                 className={classes.block}
                 target="_blank"
-              >
-                Blog
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/license"
-                className={classes.block}
-                target="_blank"
-              >
-                Licenses
+              >条款
               </a>
             </ListItem>
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
+          &copy; { new Date().getFullYear()} ,create by{" "}
           <a
-            href="https://www.creative-tim.com"
+            href="https://www.github.com/kelefun"
             className={aClasses}
             target="_blank"
-          >
-            Creative Tim
+          >kelefun
           </a>{" "}
-          for a better web.
+          for a better JAVA world.
         </div>
       </div>
     </footer>
