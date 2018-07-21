@@ -32,9 +32,9 @@ class Components extends React.Component {
                         <GridContainer>
                             <GridItem>
                                 <div className={classes.brand}>
-                                    <h1 className={classes.title}>Material Kit React.</h1>
+                                    <h1 className={classes.title}>泛斯特尔</h1>
                                     <h3 className={classes.subtitle}>
-                                        A Badass Material-UI Kit based on Material Design.
+                                        提供可靠,成熟的互联网解决方案!
                                     </h3>
                                 </div>
                             </GridItem>
