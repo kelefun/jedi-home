@@ -1,12 +1,12 @@
 import {
   grayColor,
   roseColor,
-  primaryColor,
   infoColor,
   successColor,
   warningColor,
   dangerColor
 } from "assets/jss/material-kit-react.jsx";
+const primaryColor="#F0656F";
 
 const buttonStyle = {
   button: {
