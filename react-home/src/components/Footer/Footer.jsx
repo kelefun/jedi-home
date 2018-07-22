@@ -26,7 +26,6 @@ function Footer({ ...props }) {
       <div className={classes.container}>
         <div className={classes.left}>
           <List className={classes.list}>
-
             <ListItem className={classes.inlineBlock}>
               <a
                 href="/home/aboutus"
@@ -56,7 +55,7 @@ function Footer({ ...props }) {
           </List>
         </div>
         <div className={classes.right}>
-          &copy; { new Date().getFullYear()} ,create by{" "}
+          &copy; { new Date().getFullYear()} Create by{" "}
           <a
             href="https://www.github.com/kelefun"
             className={aClasses}
