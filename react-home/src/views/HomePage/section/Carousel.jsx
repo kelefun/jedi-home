@@ -19,7 +19,7 @@ class SectionCarousel extends React.Component {
             dots: true,
             infinite: true,
             autoplaySpeed: 6000,
-            speed: 2000,
+            speed: 800,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
