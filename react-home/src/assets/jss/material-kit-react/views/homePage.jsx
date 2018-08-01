@@ -24,8 +24,16 @@ const componentsStyle = {
         zIndex: "3"
     },
     mainRaised: {
+        "@media (min-width: 576px)": {
+            maxWidth: "540px"
+        },
+        "@media (min-width: 768px)": {
+            maxWidth: "720px"
+        },
+        "@media (min-width: 992px)": {
+            maxWidth: "1080px"
+        },
         margin: "66px auto",//auto 居中显示
-        maxWidth: "1140px",
         borderRadius: "4px",
         boxShadow:
             "0 1px 10px 0px rgba(0, 0, 0, 0.1)"
