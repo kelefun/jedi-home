@@ -67,7 +67,7 @@ class CustomDropdown extends React.Component {
         return (
             <Manager>
                 <Reference>
-                    {({ref}) => (
+                    {({ ref }) => (
                         <Button
                             aria-label="Notifications"
                             aria-owns={open ? "menu-list" : null}
@@ -76,59 +76,19 @@ class CustomDropdown extends React.Component {
                             onClick={this.handleClick}
                         >
                             {buttonIcon !== undefined ? (
-                                <this.props.buttonIcon className={classes.buttonIcon}/>
+                                <this.props.buttonIcon className={classes.buttonIcon} />
                             ) : null}
                             {buttonText !== undefined ? buttonText : null}
-                            {caret ? <b className={caretClasses}/> : null}
+                            {caret ? <b className={caretClasses} /> : null}
                         </Button>
                     )}
                 </Reference>
                 <Popper placement="right">
-                    {({ref, style, placement, arrowProps}) => (
-                        <ClickAwayListener onClickAway={this.handleClose}>
-                            <Grow
-                                in={open}
-                                id="menu-list"
-                                style={
-                                    dropup
-                                        ? {transformOrigin: "0 100% 0"}
-                                        : {transformOrigin: "0 0 0"}
-                                }
-                            >
-                                <Paper className={classes.dropdown}>
-                                    <MenuList role="menu" className={classes.menuList}>
-                                        {dropdownHeader !== undefined ? (
-                                            <MenuItem
-                                                onClick={this.handleClose}
-                                                className={classes.dropdownHeader}
-                                            >
-                                                {dropdownHeader}
-                                            </MenuItem>
-                                        ) : null}
-                                        {dropdownList.map((prop, key) => {
-                                            if (prop.divider) {
-                                                return (
-                                                    <Divider
-                                                        key={key}
-                                                        onClick={this.handleClose}
-                                                        className={classes.dropdownDividerItem}
-                                                    />
-                                                );
-                                            }
-                                            return (
-                                                <MenuItem
-                                                    key={key}
-                                                    onClick={this.handleClose}
-                                                    className={dropdownItem}
-                                                >
-                                                    {prop}
-                                                </MenuItem>
-                                            );
-                                        })}
-                                    </MenuList>
-                                </Paper>
-                            </Grow>
-                        </ClickAwayListener>
+                    {({ ref, style, placement, arrowProps }) => (
+                        <div ref={ref} style={style} data-placement={placement}>
+                            Popper element
+                            <div ref={arrowProps.ref} style={arrowProps.style} />
+                        </div>
                     )}
                 </Popper>
             </Manager>

@@ -6,6 +6,8 @@ import GridItem from "components/Grid/GridItem.jsx";
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
+import articleStyle from "assets/jss/material-kit-react/views/componentsSections/articleStyle.jsx";
+
 class SectionCarousel extends React.Component {
     render() {
         const { classes } = this.props;
@@ -30,4 +32,4 @@ class SectionCarousel extends React.Component {
     }
 }
 
-export default withStyles()(SectionCarousel);
+export default withStyles(articleStyle)(SectionCarousel);
