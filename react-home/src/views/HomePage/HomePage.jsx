@@ -35,8 +35,9 @@ class HomePage extends React.Component {
                             <Button color="primary">支持 联系</Button>
                         </GridItem>
                     </GridContainer>
-                    test
-                </div>{/*main结束*/}
+                    <SectionArticle/>
+                </div>
+                {/*main结束*/}
                 <Footer/>
 
             </div>
