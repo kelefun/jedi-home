@@ -7,6 +7,8 @@ import GridItem from "components/Grid/GridItem.jsx";
 
 import articleStyle from "assets/jss/material-kit-react/views/homeSections/articleStyle.jsx";
 
+import articleStyle from "assets/jss/material-kit-react/views/componentsSections/articleStyle.jsx";
+
 class SectionCarousel extends React.Component {
     render() {
         const {classes} = this.props;
