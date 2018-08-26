@@ -1,6 +1,6 @@
 {
   "name": "jedi-admin",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "jedi管理系统",
   "private": true,
   "scripts": {
