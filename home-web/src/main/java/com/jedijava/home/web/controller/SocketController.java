@@ -21,7 +21,8 @@ public class SocketController {
     @MessageMapping("/greeting")
     public String handle(String greeting) {
         System.out.println(greeting);
-        return "[" +new Date() + ": " + greeting;
+        simpMessagingTemplate.convertAndSend("/topic/send","我是 hello");
+        return "当前时间" +new Date() + ": " + greeting;
     }
 
     @RequestMapping({"socket.html"})

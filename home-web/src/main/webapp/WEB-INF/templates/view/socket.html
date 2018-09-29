@@ -15,7 +15,10 @@
             var stompClient = Stomp.over(websocket);
             stompClient.connect({},()=>{
                 stompClient.subscribe('/topic/greeting', function (message) {
-                    console.log("默认返回消息->"+message)
+                    console.log("默认返回消息->"+message.body)
+                });
+                stompClient.subscribe('/topic/send', function (message) {
+                    console.log("模板发送消息->"+message.body)
                 });
                 setTimeout(()=>{stompClient.send("/app/greeting", {}, "hello world")}, 5000);
 
