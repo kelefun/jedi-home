@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @date 2019/1/21 17:25
  */
 @Component
-public class EventPublish {
+public class AppEventPublisher {
     @Autowired
     ApplicationContext context;
     public void publish(String message) {
