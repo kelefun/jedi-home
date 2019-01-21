@@ -6,12 +6,10 @@
     <artifactId>jedi-home</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>home-api</module>
-        <module>home-service</module>
-        <module>home-web</module>
-        <module>home-service-impl</module>
-        <module>home-dao</module>
-        <module>home-web-admin</module>
+        <module>api</module>
+        <module>service</module>
+        <module>web</module>
+        <module>web-admin</module>
     </modules>
     <packaging>pom</packaging>
 
