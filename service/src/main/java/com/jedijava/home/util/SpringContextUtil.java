@@ -11,22 +11,15 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class SpringContextUtil implements ApplicationContextAware {
-    // Spring应用上下文环境  
     private static ApplicationContext applicationContext;
 
-    /**
-     * 实现ApplicationContextAware接口的回调方法，设置上下文环境
-     *
-     * @param applicationContext
-     */
+
     @Override
-    public void setApplicationContext(ApplicationContext applicationContext) {
-        this.applicationContext = applicationContext;
+    @SuppressWarnings("NullableProblems")
+    public void setApplicationContext(ApplicationContext context)  {
+        applicationContext = context;
     }
 
-    /**
-     * @return ApplicationContext
-     */
     public static ApplicationContext getApplicationContext() {
         return applicationContext;
     }
