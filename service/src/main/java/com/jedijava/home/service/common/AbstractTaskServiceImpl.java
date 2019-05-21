@@ -1,7 +1,7 @@
 package com.jedijava.home.service.common;
 
 import com.jedijava.home.model.task.BaseTaskModel;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -10,7 +10,7 @@ import java.lang.reflect.Type;
  * @author liukaiyang
  * @date 2019/5/16 18:50
  */
-@Slf4j
+@Log4j2
 public abstract class AbstractTaskServiceImpl<M extends BaseTaskModel> implements TaskService<M> {
 
     private Class<M> clazz;
